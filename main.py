@@ -5,6 +5,7 @@ import time
 import csv
 import collections
 import pandas as pd
+import mathplotlib
 
 API_KEY ='Jmuu7yvhrH8DB76925hM7hzKl'
 API_SECRET_KEY='tYv5B1RgAcWhCohvXd93ythU3vsRHMz0mL69edFx9sGCI6bNtL'
