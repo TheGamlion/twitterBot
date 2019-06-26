@@ -1,0 +1,4 @@
+TODO:
+import lots of tweets and save them (panda datasheet?)
+split tweets into words
+grap propability of words
