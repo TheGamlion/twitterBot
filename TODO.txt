@@ -2,4 +2,5 @@ TODO:
 grap propability of words
 make bar chart
 better visuals 
+include os lib
 gui?

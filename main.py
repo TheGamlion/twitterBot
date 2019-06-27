@@ -5,7 +5,12 @@ import time
 import csv
 import collections
 import pandas as pd
-import mathplotlib
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
 
 API_KEY ='Jmuu7yvhrH8DB76925hM7hzKl'
 API_SECRET_KEY='tYv5B1RgAcWhCohvXd93ythU3vsRHMz0mL69edFx9sGCI6bNtL'
@@ -60,8 +65,27 @@ for index,row in df_collection.iterrows():
         if black_listed == index:
             print('deleted  ',black_listed)
             df_collection.drop(index, inplace=True)
-            
 
+i = 0
+data = []
+count_list = []
+for index,row in df_collection.iterrows():
+    data.append(index)
+    count_list.append(row['count'])
+    i += 1
+    if i > 10:
+        break
+
+print(data)
+
+
+#mathplotlib visualisation
+y_pos = np.arange(len(data))
+plt.bar(y_pos, count_list,align='center', alpha=0.5)
+plt.xticks(y_pos, data)
+plt.ylabel('Usage')
+plt.title('most used twitter word for sport topics' )
+plt.show()
 
 df_collection.to_csv('data_twitter.csv',sep="\t")
 
